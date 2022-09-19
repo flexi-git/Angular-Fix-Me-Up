@@ -1,0 +1,21 @@
+@use "theme"; //@import "theme";
+
+// TODO: 14. fix the deprecation
+a {
+  // @include link();
+  // padding-top: $unit;
+  // padding-bottom: $unit;
+  padding: theme.$unit theme.$brand-padding;
+  display: inline-block;
+  color: #1a1a1a;
+  &:hover {
+    //background: $brand-bg;
+    background: theme.$brand-bg;
+    color: white;
+    transition: 0.3s;
+  }
+  &.isActive {
+    background: theme.$brand-bg;
+    color: white;
+  }
+}

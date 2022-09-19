@@ -1,0 +1,15 @@
+@use "theme";
+
+th[scope='col'] {
+  border-bottom: 1px solid #333;
+  padding-right: theme.$brand-padding;
+}
+th:nth-last-child(1) {
+  padding-right: 0;
+}
+tr:nth-child(2n) {
+  background-color: #DEDEDE;
+}
+label {
+  padding-right: theme.$brand-padding;
+}
