@@ -33,8 +33,13 @@ describe('AccountSummaryComponent', () => {
     it('should return filter accounts', () => {
       // TODO: 10. this test isn't doing anything atm, how can we make it more meaningful?
       //const accounts: Account[] = [];
-      const filtered = component.filterAccounts('');
-      expect(filtered).toBe([]);
+      const filtered = component.filterAccounts('cad');
+      //expect(filtered).toBe([]);
+      expect(filtered).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({currency: 'cad'})
+        ])
+      );
     });
   });
 });
